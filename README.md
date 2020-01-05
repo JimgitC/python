@@ -1,7 +1,7 @@
 # python
 
 ## Github URL ：
-* xxx
+* https://jimgitc.github.io/python/
 ## pythonanywhere URL：
 * http://jimgitc.pythonanywhere.com/
 
