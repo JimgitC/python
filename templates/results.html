@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>期末项目</title>
+    <link rel="stylesheet" href="static/hf.css" />
+</head>
+<body>
+<form method="POST" action="/select">
+<table><h4>点击此处切换数据表格</h4>
+<tr><td>
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select></td>
+    <td><p><input value='切换' type='SUBMIT'></p></td></tr></table>
+</form>
+<form method="get" action="/">
+    <p><input value='返回首页' type='SUBMIT'></p>
+</form>
+
+<form method="post" action="/select2">
+    <table><h4>点击此进行python与数据交互</h4>
+<tr><td>
+    <select name="the_region_selected1">
+        {% for item1 in the_select_region1 %}
+            <option value="{{ item1 }}">{{ item1 }}</option>
+        {% endfor %}
+    </select></td>
+    <td><p><input value='请勿点，暂不可用' type='SUBMIT'></p></td></tr></table>
+</form>
+
+<br/>
+{{ the_plot_all|safe }}
+
+{{ the_res|safe }}
+
+</body>
+</html>
